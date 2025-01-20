@@ -1,33 +1,4 @@
-/* Base styles */
-body {
-    margin: 40px auto;
-    max-width: 650px;
-    line-height: 1.6;
-    font-size: 18px;
-    font-family: 'Inter', sans-serif;
-    color: #F8FAFC;
-    background-color: #383d3b;
-    padding: 0 10px;
-}
-
-h1, h2, h3 {
-    line-height: 1.25;
-    color: #F4A261;
-    margin-top: 1.5em;
-    margin-bottom: 0.5em;
-}
-
-nav a {
-    margin-right: 1em;
-    text-decoration: none;
-    color: #A3BFA8;
-    font-weight: 600;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
+/* Non-critical styles */
 img {
     max-width: 100%;
     height: auto;
@@ -38,6 +9,17 @@ img {
 
 header, nav, main, footer {
     margin-bottom: 1.5em;
+}
+
+h2, h3 {
+    line-height: 1.25;
+    color: #F4A261;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+nav a:hover {
+    text-decoration: underline;
 }
 
 /* Blog specific styles */
@@ -72,13 +54,13 @@ footer p {
     font-size: 0.9em;
 }
 
-/* New Accessibility Improvements */
+/* Accessibility Improvements */
 a:focus {
     outline: 2px solid #A3BFA8;
     outline-offset: 2px;
 }
 
-/* New User Experience Improvements */
+/* User Experience Improvements */
 html {
     scroll-behavior: smooth;
 }

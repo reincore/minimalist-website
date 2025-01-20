@@ -1,78 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    
-    <!-- SEO Improvements -->
-    <meta name="description" content="Blog posts about software project management, minimalist design, and tech insights by Deniz Saglam" />
-    <meta name="keywords" content="software blog, project management blog, minimalist design blog" />
-    <link rel="canonical" href="https://denizsaglam.com/blog.html" />
-    
-    <!-- Social Meta Tags -->
-    <meta property="og:title" content="Deniz Saglam | Blog">
-    <meta property="og:description" content="Tech insights and project management blog by Deniz Saglam">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog posts about software project management, minimalist design, and tech insights by Deniz Saglam">
+    <meta name="keywords" content="software blog, project management blog, minimalist design blog">
+    <link rel="canonical" href="https://yourdomain.com/blog.html">
     
     <title>Deniz Saglam | Blog</title>
     
-    <!-- Google Font with display swap -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap&display=swap" rel="stylesheet" />
+    <!-- Resource hints -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     
-    <!-- RSS Feed -->
-    <link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/rss.xml">
+    <!-- Optimized Google Fonts loading -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap">
+    </noscript>
     
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/styles.css">
-    
-    <!-- Dark/Light Mode Support -->
-    <script>
-        if (window.matchMedia('(prefers-color-scheme: light)').matches) {
-            document.body.style.backgroundColor = '#f8fafc';
-            document.body.style.color = '#383d3b';
+    <!-- Critical CSS -->
+    <style>
+        body {
+            margin: 40px auto;
+            max-width: 650px;
+            line-height: 1.6;
+            font-size: 18px;
+            font-family: 'Inter', sans-serif;
+            color: #F8FAFC;
+            background-color: #383d3b;
+            padding: 0 10px;
         }
-    </script>
+        
+        nav a {
+            margin-right: 1em;
+            text-decoration: none;
+            color: #A3BFA8;
+            font-weight: 600;
+        }
+        
+        h1, h2 {
+            line-height: 1.25;
+            color: #F4A261;
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+        }
+        
+        article {
+            margin-bottom: 2.5em;
+        }
+    </style>
+    
+    <!-- Async CSS loading -->
+    <link rel="preload" href="css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="css/styles.css">
+    </noscript>
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="index.html">About</a>
-      <a href="blog.html">Blog</a>
-    </nav>
-    <h1>Blog</h1>
-  </header>
-  
-  <main>
-    <!-- BLOG PREVIEW #2 -->
-    <article>
-      <header>
-        <h2><a href="posts/blog-post-2.html">Another Minimalist Update</a></h2>
-        <p><small>January 5, 2025</small></p>
-      </header>
-      <p>
-        Another quick snippet. This time, I'll share why I prefer light color palettes 
-        and how it keeps the focus on reading.
-      </p>
-      <a class="read-more" href="posts/blog-post-2.html">Read More</a>
-    </article>
-
-    <!-- BLOG PREVIEW #1 -->
-    <article>
-      <header>
-        <h2><a href="posts/blog-post-1.html">My First Post</a></h2>
-        <p><small>January 1, 2025</small></p>
-      </header>
-      <p>
-        This is the opening paragraph or short preview of my first blog post. 
-        Just enough text to pique your interest. 
-        Super minimal—no clutter, just content.
-      </p>
-      <a class="read-more" href="posts/blog-post-1.html">Read More</a>
-    </article>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Deniz Saglam</p>
-  </footer>
+    <header>
+        <nav>
+            <a href="index.html">About</a>
+            <a href="blog.html">Blog</a>
+        </nav>
+        <h1>Blog</h1>
+    </header>
+    
+    <main>
+        <article>
+            <header>
+                <h2><a href="posts/2025-01-05-another-minimalist-update.html">Another Minimalist Update</a></h2>
+                <p><small>January 5, 2025</small></p>
+            </header>
+            <p>
+                Another quick snippet. This time, I'll share why I prefer light color palettes 
+                and how it keeps the focus on reading.
+            </p>
+            <a class="read-more" href="posts/2025-01-05-another-minimalist-update.html">Read More</a>
+        </article>
+        
+        <article>
+            <header>
+                <h2><a href="posts/2025-01-01-first-post.html">My First Post</a></h2>
+                <p><small>January 1, 2025</small></p>
+            </header>
+            <p>
+                This is the opening paragraph or short preview of my first blog post. 
+                Just enough text to pique your interest. 
+                Super minimal—no clutter, just content.
+            </p>
+            <a class="read-more" href="posts/2025-01-01-first-post.html">Read More</a>
+        </article>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Deniz Saglam</p>
+    </footer>
 </body>
 </html>
