@@ -1,60 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    
-    <!-- SEO Improvements -->
-    <meta name="description" content="Personal website and blog of Deniz Saglam" />
-    <meta name="keywords" content="software project management, minimalist design, tech blog" />
-    <link rel="canonical" href="https://denizsaglam.com/" />
-    
-    <!-- Social Meta Tags -->
-    <meta property="og:title" content="Deniz Saglam | About">
-    <meta property="og:description" content="Personal website and blog of Deniz Saglam">
-    <meta property="og:image" content="https://denizsaglam.com/images/profile-photo1.webp">
-    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deniz Saglam | About</title>
     
-    <!-- Google Font with display swap -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap&display=swap" rel="stylesheet" />
+    <!-- Resource hints -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     
-    <!-- RSS Feed -->
-    <link rel="alternate" type="application/rss+xml" title="Blog RSS Feed" href="/rss.xml">
+    <!-- Preload critical assets -->
+    <link rel="preload" href="images/profile-photo1.webp" as="image">
     
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/styles.css">
+    <!-- Optimized Google Fonts loading -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap">
+    </noscript>
     
-    <!-- Dark/Light Mode Support -->
-    <script>
-        if (window.matchMedia('(prefers-color-scheme: light)').matches) {
-            document.body.style.backgroundColor = '#f8fafc';
-            document.body.style.color = '#383d3b';
+    <!-- Critical CSS -->
+    <style>
+        body {
+            margin: 40px auto;
+            max-width: 650px;
+            line-height: 1.6;
+            font-size: 18px;
+            font-family: 'Inter', sans-serif;
+            color: #F8FAFC;
+            background-color: #383d3b;
+            padding: 0 10px;
         }
-    </script>
+        
+        nav a {
+            margin-right: 1em;
+            text-decoration: none;
+            color: #A3BFA8;
+            font-weight: 600;
+        }
+        
+        h1 {
+            line-height: 1.25;
+            color: #F4A261;
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+        }
+    </style>
+    
+    <!-- Async CSS loading -->
+    <link rel="preload" href="css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="css/styles.css">
+    </noscript>
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="index.html">About</a>
-      <a href="blog.html">Blog</a>
-    </nav>
-    <h1>About Me</h1>
-  </header>
-
-  <main>
-    <img src="images/profile-photo1.webp" width="250px" height=auto alt="A photo of me">
-    <p>
-      Hi, I’m Deniz. I manage software projects and enjoy turning complex ideas into simple, 
-      functional designs. Outside work, I explore fitness, experiment with music, and dive into 
-      creative projects that keep life interesting. 
-      This is my minimalist corner of the web—feel free to look around.
-    </p>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Deniz Saglam</p>
-  </footer>
+    <header>
+        <nav>
+            <a href="index.html">About</a>
+            <a href="blog.html">Blog</a>
+        </nav>
+        <h1>About Me</h1>
+    </header>
+    <main>
+        <img 
+            src="images/profile-photo1.webp" 
+            width="250" 
+            height="250"
+            loading="lazy"
+            alt="A photo of me"
+            style="aspect-ratio: 1">
+        <p>
+            Hi, I'm Deniz. I manage software projects and enjoy turning complex ideas into simple, 
+            functional designs. Outside work, I explore fitness, experiment with music, and dive into 
+            creative projects that keep life interesting. 
+            This is my minimalist corner of the web—feel free to look around.
+        </p>
+    </main>
+    <footer>
+        <p>&copy; 2025 Deniz Saglam</p>
+    </footer>
 </body>
 </html>
