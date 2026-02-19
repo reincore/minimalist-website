@@ -3,11 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Blog posts about software project management, minimalist design, and tech insights by Deniz Saglam">
+
+    <!-- Primary meta -->
+    <title>Deniz Saglam | Blog</title>
+    <meta name="description" content="Blog posts about software project management, minimalist design, and tech insights by Deniz Saglam.">
     <meta name="keywords" content="software blog, project management blog, minimalist design blog">
     <link rel="canonical" href="https://denizsaglam.com/blog.html">
     
-    <title>Deniz Saglam | Blog</title>
+    <!-- Open Graph -->
+    <meta property="og:title" content="Deniz Saglam | Blog">
+    <meta property="og:description" content="Blog posts about software project management, minimalist design, and tech insights by Deniz Saglam.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://denizsaglam.com/blog.html">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Deniz Saglam | Blog">
+    <meta name="twitter:description" content="Blog posts about software project management, minimalist design, and tech insights by Deniz Saglam.">
     
     <!-- Resource hints -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,12 +44,30 @@
             background-color: #383d3b;
             padding: 0 10px;
         }
+
+        nav {
+            margin-bottom: 1.5em;
+        }
         
         nav a {
             margin-right: 1em;
             text-decoration: none;
             color: #A3BFA8;
             font-weight: 600;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        nav a:focus,
+        nav a:focus-visible {
+            outline: 2px solid #A3BFA8;
+            outline-offset: 2px;
+        }
+        
+        header, main, footer {
+            margin-bottom: 1.5em;
         }
         
         h1, h2 {
@@ -50,6 +80,55 @@
         article {
             margin-bottom: 2.5em;
         }
+
+        article h2 a {
+            color: #F4A261;
+            text-decoration: none;
+        }
+
+        article h2 a:hover {
+            text-decoration: underline;
+        }
+
+        .read-more {
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 0.25em;
+            color: #A3BFA8;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+        footer p {
+            color: #D4B483;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                font-size: 16px;
+                margin: 20px auto;
+            }
+        }
+
+        @media print {
+            body {
+                color: #000;
+                background: #fff;
+            }
+            
+            a {
+                text-decoration: underline;
+            }
+            
+            nav {
+                display: none;
+            }
+        }
     </style>
     
     <!-- Async CSS loading -->
@@ -57,12 +136,23 @@
     <noscript>
         <link rel="stylesheet" href="css/styles.css">
     </noscript>
+
+    <!-- Structured data: Blog -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Deniz Saglam Blog",
+      "url": "https://denizsaglam.com/blog.html",
+      "description": "Blog posts about software project management and minimalist design."
+    }
+    </script>
 </head>
 <body>
     <header>
-        <nav>
-            <a href="/">About</a>
-            <a href="blog.html">Blog</a>
+        <nav role="navigation" aria-label="Main navigation">
+            <a href="index.html">About</a>
+            <a href="blog.html" aria-current="page">Blog</a>
         </nav>
         <h1>Blog</h1>
     </header>

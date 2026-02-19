@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     
-    <!-- SEO Improvements -->
+    <!-- Primary meta (to be customized per post) -->
+    <title>[Post Title] | Deniz Saglam</title>
     <meta name="description" content="[Post description here]" />
     <meta name="keywords" content="[relevant keywords]" />
     <meta name="author" content="Deniz Saglam">
@@ -12,31 +13,145 @@
     
     <!-- Article Meta -->
     <meta property="article:published_time" content="[ISO date]">
-    
-    <!-- Social Meta Tags -->
+
+    <!-- Open Graph -->
     <meta property="og:title" content="[Post Title] | Deniz Saglam">
     <meta property="og:description" content="[Post description here]">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://denizsaglam.com/posts/[post-filename].html">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="[Post Title] | Deniz Saglam">
+    <meta name="twitter:description" content="[Post description here]">
     
-    <title>[Post Title] | Deniz Saglam</title>
+    <!-- Resource hints -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+
+    <!-- Optimized Google Fonts loading (consistent with other pages) -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap">
+    </noscript>
     
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap&display=swap" rel="stylesheet" />
+    <!-- Critical CSS (shared look + light-mode via media query) -->
+    <style>
+        body {
+            margin: 40px auto;
+            max-width: 650px;
+            line-height: 1.6;
+            font-size: 18px;
+            font-family: 'Inter', sans-serif;
+            color: #F8FAFC;
+            background-color: #383d3b;
+            padding: 0 10px;
+        }
+
+        nav {
+            margin-bottom: 1.5em;
+        }
+
+        nav a {
+            margin-right: 1em;
+            text-decoration: none;
+            color: #A3BFA8;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        nav a:focus,
+        nav a:focus-visible {
+            outline: 2px solid #A3BFA8;
+            outline-offset: 2px;
+        }
+
+        header, main, footer {
+            margin-bottom: 1.5em;
+        }
+
+        h1 {
+            line-height: 1.25;
+            color: #F4A261;
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+        }
+
+        time {
+            display: block;
+            margin-bottom: 1em;
+            color: #D4B483;
+            font-size: 0.9em;
+        }
+
+        .content {
+            margin-top: 1em;
+        }
+
+        footer p {
+            color: #D4B483;
+            font-size: 0.9em;
+        }
+
+        @media (prefers-color-scheme: light) {
+            body {
+                background-color: #f8fafc;
+                color: #383d3b;
+            }
+        }
+
+        @media (max-width: 600px) {
+            body {
+                font-size: 16px;
+                margin: 20px auto;
+            }
+        }
+
+        @media print {
+            body {
+                color: #000;
+                background: #fff;
+            }
+
+            a {
+                text-decoration: underline;
+            }
+
+            nav {
+                display: none;
+            }
+        }
+    </style>
     
     <!-- CSS -->
-    <link rel="stylesheet" href="../css/styles.css">
-    
-    <!-- Dark/Light Mode Support -->
-    <script>
-        if (window.matchMedia('(prefers-color-scheme: light)').matches) {
-            document.body.style.backgroundColor = '#f8fafc';
-            document.body.style.color = '#383d3b';
-        }
+    <link rel="preload" href="../css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="../css/styles.css">
+    </noscript>
+
+    <!-- Structured data: BlogPosting (customize per post) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "[Post Title]",
+      "url": "https://denizsaglam.com/posts/[post-filename].html",
+      "datePublished": "[ISO date]",
+      "author": {
+        "@type": "Person",
+        "name": "Deniz Saglam"
+      },
+      "description": "[Post description here]"
+    }
     </script>
 </head>
 <body>
     <header>
-        <nav>
+        <nav role="navigation" aria-label="Main navigation">
             <a href="../index.html">About</a>
             <a href="../blog.html">Blog</a>
         </nav>

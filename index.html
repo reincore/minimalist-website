@@ -3,11 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary meta -->
+    <title>Deniz Saglam | About</title>
     <meta name="description" content="Personal website and blog of Deniz Saglam, focusing on software project management and minimalist design.">
     <meta name="keywords" content="software project management, minimalist design, tech blog">
     <link rel="canonical" href="https://denizsaglam.com/">
-    
-    <title>Deniz Saglam | About</title>
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Deniz Saglam | About">
+    <meta property="og:description" content="Personal website and blog of Deniz Saglam, focusing on software project management and minimalist design.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://denizsaglam.com/">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Deniz Saglam | About">
+    <meta name="twitter:description" content="Personal website and blog of Deniz Saglam, focusing on software project management and minimalist design.">
     
     <!-- Resource hints -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,6 +47,10 @@
             background-color: #383d3b;
             padding: 0 10px;
         }
+
+        nav {
+            margin-bottom: 1.5em;
+        }
         
         nav a {
             margin-right: 1em;
@@ -42,12 +58,61 @@
             color: #A3BFA8;
             font-weight: 600;
         }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        nav a:focus,
+        nav a:focus-visible {
+            outline: 2px solid #A3BFA8;
+            outline-offset: 2px;
+        }
         
+        header, main, footer {
+            margin-bottom: 1.5em;
+        }
+
         h1 {
             line-height: 1.25;
             color: #F4A261;
             margin-top: 1.5em;
             margin-bottom: 0.5em;
+        }
+
+        footer p {
+            color: #D4B483;
+            font-size: 0.9em;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-top: 1em;
+            border-radius: 8px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                font-size: 16px;
+                margin: 20px auto;
+            }
+        }
+
+        @media print {
+            body {
+                color: #000;
+                background: #fff;
+            }
+            
+            a {
+                text-decoration: underline;
+            }
+            
+            nav {
+                display: none;
+            }
         }
     </style>
     
@@ -56,11 +121,23 @@
     <noscript>
         <link rel="stylesheet" href="css/styles.css">
     </noscript>
+
+    <!-- Structured data: Person -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Deniz Saglam",
+      "url": "https://denizsaglam.com/",
+      "description": "Software project manager focused on minimalist, functional design.",
+      "sameAs": []
+    }
+    </script>
 </head>
 <body>
     <header>
-        <nav>
-            <a href="/">About</a>
+        <nav role="navigation" aria-label="Main navigation">
+            <a href="index.html" aria-current="page">About</a>
             <a href="blog.html">Blog</a>
         </nav>
         <h1>About Me</h1>
@@ -70,8 +147,7 @@
             src="images/profile-photo1.webp" 
             width="250" 
             height="250"
-            loading="lazy"
-            alt="A photo of me"
+            alt="Portrait of Deniz Saglam"
             style="aspect-ratio: 1">
         <p>
             Hi, I'm Deniz. I manage software projects and enjoy turning complex ideas into simple, 
